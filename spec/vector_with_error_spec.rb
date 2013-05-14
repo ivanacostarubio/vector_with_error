@@ -12,10 +12,9 @@ class Vector
 
   private
   def within(x,y,tolerance)
-    return true if x.between?(y - tolerance, y)
-    return true if x.between?(y, y + tolerance)
-    false
+    x.between?(y - tolerance, y + tolerance)
   end
+
 end
 
 describe Vector do
